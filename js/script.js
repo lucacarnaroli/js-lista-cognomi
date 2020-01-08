@@ -4,14 +4,19 @@ var cognome = prompt('inserisci il tuo cognome qui.');
 
 var cognomi = ['Rossi','Verdi','Grossi','Geppi','Cracco','Barbieri'];
 cognomi.push(cognome);
-console.log(cognomi.sort());
+cognomi.sort();
 
-
-for (var i = 0; i < cognomi.length; i++) {
-  document.getElementById('cognomi').innerHTML += '<li>' + (i+1) + ' ' + cognomi[i] + ' ' + '</li>';
-}
 // 3-stampa la lista ordinata alfabeticamente (in html ul > li).
-
+// CICLO FOR
+// for (var i = 0; i < cognomi.length; i++) {
+//   document.getElementById('cognomi').innerHTML += '<li>' + (i+1) + ' ' + cognomi[i] + ' ' + '</li>';
+// }
+// CICLO WHILE
+var i = 0;
+while (i < cognomi.length) {
+  document.getElementById('cognomi').innerHTML += '<li>' + (i+1) + ' ' + cognomi[i] + ' ' + '</li>'
+  i++
+}
 // 4-Scrivi anche la posizione della lista in cui il nuovo utente si trova.
 var posizione = cognomi.indexOf(cognome);
 console.log(posizione);
